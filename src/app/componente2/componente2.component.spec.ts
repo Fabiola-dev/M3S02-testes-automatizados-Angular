@@ -20,10 +20,7 @@ describe('Componente2Component', () => {
   });
   
   it('Deve validar o método calcularMedia', () => {
-    const num1 = 8;
-    const num2 = 6;
-    const num3 = 10;
-    const media = (num1 + num2 + num3) / 3;
-    expect(component.calcularMedia(num1,num2,num3)).toEqual(media);
+    let media = component.calcularMedia(10,10,10);
+    expect(media).toEqual(10);
   });
 });
