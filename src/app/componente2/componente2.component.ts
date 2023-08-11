@@ -15,8 +15,7 @@ export class Componente2Component {
   } */
 
   calcularMedia(num1: number, num2: number, num3: number): number {
-    let sum = num1 + num2 + num3;
-    let media = sum / 3;
+    let media = (num1 + num2 + num3) / 3;
     return media;
   };
 
