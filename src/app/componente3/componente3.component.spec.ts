@@ -37,8 +37,15 @@ describe('Componente3Component', () => {
     let tamanhoArray = component.array.length;
     component.removeIten('valor 1');
     component.removeIten('valor 4');
-    
+
     expect(component.array.length).toBeLessThan(tamanhoArray);
   });
 
+  it('deve verificar se item lasanha existe, caso não adicione', () => {
+    let newString = 'lasanha';
+    component.array.indexOf(newString) != -1
+    component.insertStart(newString);
+    
+    expect(component.array).toContain(newString);
+  });
 });
