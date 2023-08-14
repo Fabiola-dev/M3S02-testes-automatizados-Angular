@@ -13,4 +13,13 @@ export class Componente3Component {
     return this.array.unshift(valor);
   }
 
+  removeIten(valor: string) {
+    let index = this.array.indexOf(valor);
+    if( index == -1) {
+      this.array.splice(index, 1);
+    }
+    return this.array;
+
+  }
+
 }

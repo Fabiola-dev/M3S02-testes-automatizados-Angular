@@ -25,4 +25,20 @@ describe('Componente3Component', () => {
 
     expect(array).toBeTruthy();
   });
+
+  it('deve aumentar o array quando adicionar mais um item.', () => {
+    let tamanhoArray = component.array.length;
+    component.insertStart('valor 4');
+
+    expect(component.array.length).toBeGreaterThan(tamanhoArray);
+  });
+
+  it('deve remover um item do array quando chamado.', () => {
+    let tamanhoArray = component.array.length;
+    component.removeIten('valor 1');
+    component.removeIten('valor 4');
+    
+    expect(component.array.length).toBeLessThan(tamanhoArray);
+  });
+
 });
