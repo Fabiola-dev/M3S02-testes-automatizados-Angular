@@ -14,9 +14,8 @@ export class Componente2Component {
     return media;
   } */
 
-  calcularMedia(num1: number, num2: number, num3: number): number {
-    let media = (num1 + num2 + num3) / 3;
-    return media;
+  calcularMedia(num1: number, num2: number, num3: number) {
+    return (num1 + num2 + num3) / 3;
   };
 
 }

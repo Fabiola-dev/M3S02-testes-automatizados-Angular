@@ -19,7 +19,7 @@ describe('Componente2Component', () => {
     expect(component).toBeTruthy();
   });
   
-  it('Deve validar o método calcularMedia', () => {
+  it('calcularMedia deve retornar a média de 3 números quando chamado', () => {
     let media = component.calcularMedia(10,10,10);
     expect(media).toEqual(10);
   });
