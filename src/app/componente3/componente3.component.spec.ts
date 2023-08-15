@@ -2,18 +2,23 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Componente3Component } from './componente3.component';
 
-describe('Componente3Component', () => {
+fdescribe('Componente3Component', () => {
   let component: Componente3Component;
   let fixture: ComponentFixture<Componente3Component>;
+  let total = 0;
 
   beforeEach(() => {
+    total += 10;
+
     TestBed.configureTestingModule({
       declarations: [Componente3Component]
     });
     fixture = TestBed.createComponent(Componente3Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
   });
+
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -56,4 +61,11 @@ describe('Componente3Component', () => {
 
     expect(component.itemExist(array, item)).toThrow();
   });
+
+  it('Deve somar com mais 10 e retornar o total quando chamado', () => {
+    total += 10;
+
+    expect(total).toEqual(20);
+  });
+
 });
