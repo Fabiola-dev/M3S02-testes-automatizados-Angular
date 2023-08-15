@@ -35,8 +35,8 @@ describe('Componente3Component', () => {
 
   it('deve remover um item do array quando chamado.', () => {
     let tamanhoArray = component.array.length;
-    component.removeIten('valor 1');
-    component.removeIten('valor 4');
+    component.removeItem('valor 1');
+    component.removeItem('valor 4');
 
     expect(component.array.length).toBeLessThan(tamanhoArray);
   });
@@ -47,5 +47,13 @@ describe('Componente3Component', () => {
     component.insertStart(newString);
     
     expect(component.array).toContain(newString);
+  });
+
+  // ainda não funciona.
+  it('deve lançar um erro se item não existir no array', () => {
+    let array = ['dado 1', 'dado 2', 'dado 3']
+    let item = 'valor 1';
+
+    expect(component.itemExist(array, item)).toThrow();
   });
 });

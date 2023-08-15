@@ -13,13 +13,20 @@ export class Componente3Component {
     return this.array.unshift(valor);
   }
 
-  removeIten(valor: string) {
+  removeItem(valor: string) {
     let index = this.array.indexOf(valor);
-    if( index == -1) {
+    if( index == -1 ) {
       this.array.splice(index, 1);
     }
     return this.array;
-
   }
 
+  itemExist(array: string[], valor: string) {
+    let index = array.indexOf(valor);
+
+    if ( index !== -1 ) {
+      return index;
+    } else throw new Error("Valor não está contido no array.");
+    
+  }
 }
