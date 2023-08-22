@@ -49,11 +49,10 @@ describe('Componente3Component', () => {
     expect(component.array).toContain(newString);
   });
 
-  // ainda não funciona.
   it('deve lançar um erro se item não existir no array', () => {
     let array = ['dado 1', 'dado 2', 'dado 3']
     let item = 'valor 1';
 
-    expect(component.itemExist(array, item)).toThrow();
+    expect(() => component.itemExist(array, item)).toThrow();
   });
 });
